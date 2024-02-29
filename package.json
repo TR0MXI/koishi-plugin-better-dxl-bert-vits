@@ -8,13 +8,10 @@
         "lib",
         "dist"
     ],
-
     "dependencies": {
         "@initencounter/vits": "^0.0.3"
     },
-
     "author": "TR0MX <altria.megumi@gmail.com>",
-
     "license": "MIT",
     "koishi": {
         "service": {
