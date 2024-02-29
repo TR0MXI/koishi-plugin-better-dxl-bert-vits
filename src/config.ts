@@ -1,6 +1,6 @@
 import { Schema } from 'koishi'
 import { Language } from '../lib/list'
-import { SpeakerIdMap, SpeakerKeyIdMap } from './constants'
+import { SpeakerKeyIdMap } from './constants'
 
 export const usage =
     `## 🌈 使用
@@ -29,11 +29,11 @@ export const usage =
 
     下表为每个讲者对应的 speaker_id，如果某个使用了 vits 插件的插件需要这个数字的 speaker_id，你可以根据下表来获取实际的 id。
 
-    | 讲者 | speaker_id | 模型 id |
-    |-----|-------|-------------
+    | 讲者 | speaker_id
+    |-----|-------|
     ` +
     Object.entries(SpeakerKeyIdMap)
-        .map((s) => `| ${s[1]} | ${s[0]} | ${SpeakerIdMap[s[1]]} |`)
+        .map((s) => `| ${s[1]} | ${s[0]} |`)
         .join('\n\n')
 
 export interface Config {
@@ -42,15 +42,14 @@ export interface Config {
     noise: number
     noisew: number
     length: number
-    language: string
     prompt: string
     weight: number
 }
 
 export const Config: Schema<Config> = Schema.object({
-    speaker: Schema.union(Object.keys(SpeakerIdMap))
+    speaker: Schema.union(Object.values(SpeakerKeyIdMap))
         .description('默认讲者')
-        .default('向晚'),
+        .default('向晚_ZH'),
 
     sdp_ratio: Schema.number()
         .min(0)
@@ -84,7 +83,7 @@ export const Config: Schema<Config> = Schema.object({
         .description('语速')
         .default(1),
 
-    language: Schema.union(Language).description('默认语言').default('AUTO'),
+    // language: Schema.union(Language).description('默认语言').default('ZH'),
 
     prompt: Schema.string()
         .description('用文字描述生成风格。注意只能使用英文且首字母大写单词')

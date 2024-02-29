@@ -1,5 +1,5 @@
 import { Context } from 'koishi'
-import { SpeakerIdMap } from './constants'
+import { SpeakerKeyMap } from './constants'
 // eslint-disable-next-line @typescript-eslint/naming-convention
 import { BertVits, BertVitsService } from './service'
 import { Config } from './config'
@@ -13,7 +13,7 @@ export function apply(ctx: Context, config: Config) {
     ctx.plugin(BertVitsService, vits)
     // }
 
-    ctx.command('bertVit <text:string>', 'AIBertVit语音合成帮助')
+    ctx.command('bertVit <text:text>', 'AIBertVit语音合成帮助')
         .option('speaker', '-s [speaker:string] 语音合成的讲者', {
             fallback: config.speaker
         })
@@ -35,9 +35,6 @@ export function apply(ctx: Context, config: Config) {
         .option('weight', '-w [weight:number] 主文本和辅助文本的混合比率', {
             fallback: config.weight
         })
-        .option('language', '-la [language:string] 语音合成的语言', {
-            fallback: config.language
-        })
         .action(async ({ session, options }, text) => {
             if (!text) {
                 await session.execute('bertVit -h')
@@ -45,7 +42,8 @@ export function apply(ctx: Context, config: Config) {
             }
 
             const { speaker } = options
-            const version = SpeakerIdMap[speaker]
+            const version =
+                SpeakerKeyMap[speaker] ?? SpeakerKeyMap[speaker + '_ZH']
 
             if (!version) {
                 return `找不到这个 ${speaker} 讲者，请检查你的输入。`

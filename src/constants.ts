@@ -1,30 +1,50 @@
 import path from 'path'
 import fs from 'fs'
+import { APISpeakers } from './types'
 
-export const SpeakerIdMap = (function () {
+export const APISpeakerList: APISpeakers[] = (function () {
     const dir = path.resolve('data/bert-vits')
-    const file = path.resolve(dir, 'speaker.json')
+    const file = path.resolve(dir, 'speakers.json')
 
     if (!fs.existsSync(file)) {
-        const defaultPath = path.join(__dirname, '../resources/speaker.json')
-        fs.mkdirSync(dir)
+        const defaultPath = path.join(__dirname, '../resources/speakers.json')
+
+        try {
+            fs.mkdirSync(dir)
+        } catch (e) {
+            //
+        }
         fs.copyFileSync(defaultPath, file)
     }
 
     return JSON.parse(fs.readFileSync(file, 'utf-8'))
 })()
 
-// 颠倒 key-value 顺序
-export const nameMap = Object.fromEntries(
-    Object.entries(SpeakerIdMap).map(([k, v]) => [v, k])
-)
-
-const baseSpeakId = 114513
+let baseSpeakId = 114514
 
 // as {key:value}
-export const SpeakerKeyIdMap = Object.entries(SpeakerIdMap)
-    .sort((a, b) => (a[0] < b[0] ? 1 : -1))
-    .map(([k, v], index) => [k, baseSpeakId + index])
+export const SpeakerKeyIdMap = APISpeakerList.flatMap((apiSpeaker) => {
+    const entries = Object.entries(apiSpeaker.speakers)
+
+    const result: string[] = []
+
+    for (const [key, value] of entries) {
+        if (value.language) {
+            result.push(`${key}_${value.language}`)
+            continue
+        }
+
+        if (value.languages) {
+            value.languages.forEach((l) => {
+                result.push(`${key}_${l}`)
+            })
+        }
+    }
+
+    return result
+})
+    .sort((a, b) => (a < b ? 1 : -1))
+    .map((k, index) => [k, baseSpeakId++])
     .reduce(
         (acc, [k, v]) => {
             acc[v as number] = k as string
@@ -33,4 +53,7 @@ export const SpeakerKeyIdMap = Object.entries(SpeakerIdMap)
         {} as Record<number, string>
     )
 
-export const Language = ['ZH', 'JP', 'EN', 'AUTO', 'MIX']
+// reverse SpeakerKeyIdMap
+export const SpeakerKeyMap = Object.fromEntries(
+    Object.entries(SpeakerKeyIdMap).map(([k, v]) => [v, k])
+)

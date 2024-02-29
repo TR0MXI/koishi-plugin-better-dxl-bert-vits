@@ -9,3 +9,24 @@ export interface SpeakConfig {
     language: string
     input: string
 }
+
+export interface Speaker {
+    languages?: string[]
+    language?: string
+    version?: string
+    speaker?: string
+}
+
+export interface API {
+    base: string
+    params?: {
+        [key: string]: string
+    }
+}
+
+export interface APISpeakers {
+    api: API
+    speakers: {
+        [key: string]: Speaker
+    }
+}
