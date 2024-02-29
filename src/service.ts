@@ -139,7 +139,7 @@ export class BertVits {
 export class BertVitsService extends Vits {
     constructor(
         ctx: Context,
-        private impl: BertVits
+        public impl: BertVits
     ) {
         super(ctx)
     }
