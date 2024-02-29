@@ -43,8 +43,6 @@ export class BertVits {
         const version = SpeakerIdMap[speaker]
         const speakerName = nameMap[version]
 
-        this.logger.error('version:', version, speakerName, options)
-
         const payload = {
             data: [
                 input,
