@@ -6,15 +6,12 @@
     "typings": "lib/index.d.ts",
     "files": [
         "lib",
-        "dist"
+        "resources"
     ],
-
     "dependencies": {
         "@initencounter/vits": "^0.0.3"
     },
-
     "author": "TR0MX <altria.megumi@gmail.com>",
-
     "license": "MIT",
     "koishi": {
         "service": {
