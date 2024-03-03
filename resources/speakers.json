@@ -490,62 +490,16 @@
                 ],
                 "version": "SXC-Bert-VITS2",
                 "speaker": "孙笑川"
-            },
-            "以里illi": {
-                "languages": [
-                    "ZH",
-                    "JP",
-                    "EN",
-                    "AUTO",
-                    "MIX"
-                ],
-                "version": "illi-Bert-VITS2",
-                "speaker": "illi"
-            },
-            "力巴尔": {
-                "languages": [
-                    "ZH",
-                    "JP",
-                    "EN",
-                    "AUTO",
-                    "MIX"
-                ],
-                "version": "Revali_Bert2_V2",
-                "speaker": "Test2"
-            },
-            "露早": {
-                "languages": [
-                    "ZH",
-                    "JP",
-                    "EN",
-                    "AUTO",
-                    "MIX"
-                ],
-                "version": "Gogo-Bert-VITS2",
-                "speaker": "aimino"
-            },
-            "柚恩": {
-                "languages": [
-                    "ZH",
-                    "JP",
-                    "EN",
-                    "AUTO",
-                    "MIX"
-                ],
-                "version": "UU-Bert-VITS2",
-                "speaker": "aimino"
-            },
-            "克烈": {
-                "languages": [
-                    "ZH",
-                    "JP",
-                    "EN",
-                    "AUTO",
-                    "MIX"
-                ],
-                "version": "Kled-Bert-VITS2",
-                "speaker": "kled"
-            },
+            }
+        }
+    },
+
+    {
+        "api": {
+            "base": "https://www.modelscope.cn/api/v1/studio/MiDd1Eye/{version}/gradio"
+        },
+        "speakers": {
+
             "BT7274": {
                 "languages": [
                     "ZH",
@@ -834,6 +788,94 @@
             }
         }
     },
+
+    {
+        "api": {
+            "base": "https://www.modelscope.cn/api/v1/studio/srcresources/{version}/gradio"
+        },
+        "speakers": {
+            "克烈": {
+                "languages": [
+                    "ZH",
+                    "JP",
+                    "EN",
+                    "AUTO",
+                    "MIX"
+                ],
+                "version": "Kled-Bert-VITS2",
+                "speaker": "kled"
+            }
+        }
+    },
+
+    {
+        "api": {
+            "base": "https://www.modelscope.cn/api/v1/studio/Meteorakuma/{version}/gradio"
+        },
+        "speakers": {
+            "露早": {
+                "languages": [
+                    "ZH",
+                    "JP",
+                    "EN",
+                    "AUTO",
+                    "MIX"
+                ],
+                "version": "Gogo-Bert-VITS2",
+                "speaker": "aimino"
+            },
+            "柚恩": {
+                "languages": [
+                    "ZH",
+                    "JP",
+                    "EN",
+                    "AUTO",
+                    "MIX"
+                ],
+                "version": "UU-Bert-VITS2",
+                "speaker": "aimino"
+            }
+        }
+    },
+
+    {
+        "api": {
+            "base": "https://www.modelscope.cn/api/v1/studio/hanson91696/{version}/gradio"
+        },
+        "speakers": {
+            "力巴尔": {
+                "languages": [
+                    "ZH",
+                    "JP",
+                    "EN",
+                    "AUTO",
+                    "MIX"
+                ],
+                "version": "Test2",
+                "speaker": "Revali_Bert2_V2"
+            }
+        }
+    },
+
+    {
+        "api": {
+            "base": "https://www.modelscope.cn/api/v1/studio/Rayzggz/{version}/gradio"
+        },
+        "speakers": {
+            "以里illi": {
+                "languages": [
+                    "ZH",
+                    "JP",
+                    "EN",
+                    "AUTO",
+                    "MIX"
+                ],
+                "version": "illi-Bert-VITS2",
+                "speaker": "illi"
+            }
+        }
+    },
+
     {
         "api": {
             "base": "https://v2.genshinvoice.top"
