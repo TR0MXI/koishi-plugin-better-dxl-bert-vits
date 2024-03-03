@@ -490,6 +490,347 @@
                 ],
                 "version": "SXC-Bert-VITS2",
                 "speaker": "孙笑川"
+            },
+            "以里illi": {
+                "languages": [
+                    "ZH",
+                    "JP",
+                    "EN",
+                    "AUTO",
+                    "MIX"
+                ],
+                "version": "illi-Bert-VITS2",
+                "speaker": "illi"
+            },
+            "力巴尔": {
+                "languages": [
+                    "ZH",
+                    "JP",
+                    "EN",
+                    "AUTO",
+                    "MIX"
+                ],
+                "version": "Revali_Bert2_V2",
+                "speaker": "Test2"
+            },
+            "露早": {
+                "languages": [
+                    "ZH",
+                    "JP",
+                    "EN",
+                    "AUTO",
+                    "MIX"
+                ],
+                "version": "Gogo-Bert-VITS2",
+                "speaker": "aimino"
+            },
+            "柚恩": {
+                "languages": [
+                    "ZH",
+                    "JP",
+                    "EN",
+                    "AUTO",
+                    "MIX"
+                ],
+                "version": "UU-Bert-VITS2",
+                "speaker": "aimino"
+            },
+            "克烈": {
+                "languages": [
+                    "ZH",
+                    "JP",
+                    "EN",
+                    "AUTO",
+                    "MIX"
+                ],
+                "version": "Kled-Bert-VITS2",
+                "speaker": "kled"
+            },
+            "BT7274": {
+                "languages": [
+                    "ZH",
+                    "JP",
+                    "EN",
+                    "AUTO",
+                    "MIX"
+                ],
+                "version": "BT7274-Bert-VITS2",
+                "speaker": "Speaker"
+            },
+            "皮特174": {
+                "languages": [
+                    "ZH",
+                    "JP",
+                    "EN",
+                    "AUTO",
+                    "MIX"
+                ],
+                "version": "Pite-Bert-VITS2",
+                "speaker": "Speaker"
+            },
+            "万蒂奇": {
+                "languages": [
+                    "ZH",
+                    "JP",
+                    "EN",
+                    "AUTO",
+                    "MIX"
+                ],
+                "version": "Vantage-Bert-VITS2",
+                "speaker": "Speaker"
+            },
+            "罗芭": {
+                "languages": [
+                    "ZH",
+                    "JP",
+                    "EN",
+                    "AUTO",
+                    "MIX"
+                ],
+                "version": "Loba-Bert-VITS2",
+                "speaker": "Speaker"
+            },
+            "艾许": {
+                "languages": [
+                    "ZH",
+                    "JP",
+                    "EN",
+                    "AUTO",
+                    "MIX"
+                ],
+                "version": "Ash-Bert-VITS2",
+                "speaker": "Speaker"
+            },
+            "懒羊羊": {
+                "languages": [
+                    "ZH",
+                    "JP",
+                    "EN",
+                    "AUTO",
+                    "MIX"
+                ],
+                "version": "LanYangYang-Bert-VITS2",
+                "speaker": "Speaker"
+            },
+            "幻象": {
+                "languages": [
+                    "ZH",
+                    "JP",
+                    "EN",
+                    "AUTO",
+                    "MIX"
+                ],
+                "version": "Mirage-Bert-VITS2",
+                "speaker": "Speaker"
+            },
+            "瓦尔基里": {
+                "languages": [
+                    "ZH",
+                    "JP",
+                    "EN",
+                    "AUTO",
+                    "MIX"
+                ],
+                "version": "Valkyrie-Bert-VITS2",
+                "speaker": "Speaker"
+            },
+            "弹道": {
+                "languages": [
+                    "ZH",
+                    "JP",
+                    "EN",
+                    "AUTO",
+                    "MIX"
+                ],
+                "version": "Ballistic-Bert-VITS2",
+                "speaker": "Speaker"
+            },
+            "密客": {
+                "languages": [
+                    "ZH",
+                    "JP",
+                    "EN",
+                    "AUTO",
+                    "MIX"
+                ],
+                "version": "Crypto-Bert-VITS2",
+                "speaker": "Speaker"
+            },
+            "亡灵": {
+                "languages": [
+                    "ZH",
+                    "JP",
+                    "EN",
+                    "AUTO",
+                    "MIX"
+                ],
+                "version": "Revenant-Bert-VITS2",
+                "speaker": "Speaker"
+            },
+            "沃特森": {
+                "languages": [
+                    "ZH",
+                    "JP",
+                    "EN",
+                    "AUTO",
+                    "MIX"
+                ],
+                "version": "Wattson-Bert-VITS2",
+                "speaker": "Speaker"
+            },
+            "疯玛吉": {
+                "languages": [
+                    "ZH",
+                    "JP",
+                    "EN",
+                    "AUTO",
+                    "MIX"
+                ],
+                "version": "Madmaggie-Bert-VITS2",
+                "speaker": "Speaker"
+            },
+            "播音员": {
+                "languages": [
+                    "ZH",
+                    "JP",
+                    "EN",
+                    "AUTO",
+                    "MIX"
+                ],
+                "version": "AiNotify-Bert-VITS2",
+                "speaker": "Speaker"
+            },
+            "寻血猎犬": {
+                "languages": [
+                    "ZH",
+                    "JP",
+                    "EN",
+                    "AUTO",
+                    "MIX"
+                ],
+                "version": "Bloodhound-Bert-VITS2",
+                "speaker": "Speaker"
+            },
+            "地平线": {
+                "languages": [
+                    "ZH",
+                    "JP",
+                    "EN",
+                    "AUTO",
+                    "MIX"
+                ],
+                "version": "Horizon-Bert-VITS2",
+                "speaker": "Speaker"
+            },
+            "暴雷": {
+                "languages": [
+                    "ZH",
+                    "JP",
+                    "EN",
+                    "AUTO",
+                    "MIX"
+                ],
+                "version": "Fuse-Bert-VITS2",
+                "speaker": "Speaker"
+            },
+            "恶灵": {
+                "languages": [
+                    "ZH",
+                    "JP",
+                    "EN",
+                    "AUTO",
+                    "MIX"
+                ],
+                "version": "wraith-Bert-VITS2",
+                "speaker": "Speaker"
+            },
+            "动力小子": {
+                "languages": [
+                    "ZH",
+                    "JP",
+                    "EN",
+                    "AUTO",
+                    "MIX"
+                ],
+                "version": "octane-Bert-VITS2",
+                "speaker": "Speaker"
+            },
+            "雫るる": {
+                "languages": [
+                    "ZH",
+                    "JP",
+                    "EN",
+                    "AUTO",
+                    "MIX"
+                ],
+                "version": "lulu-Bert-VITS2",
+                "speaker": "Speaker"
+            },
+            "探路者": {
+                "languages": [
+                    "ZH",
+                    "JP",
+                    "EN",
+                    "AUTO",
+                    "MIX"
+                ],
+                "version": "Pathfinder-Bert-VITS2",
+                "speaker": "Speaker"
+            },
+            "探路者2.0": {
+                "languages": [
+                    "ZH",
+                    "JP",
+                    "EN",
+                    "AUTO",
+                    "MIX"
+                ],
+                "version": "Pathfinder2.0-Bert-VITS2-copy",
+                "speaker": "Speaker"
+            },
+            "米诺": {
+                "languages": [
+                    "ZH",
+                    "JP",
+                    "EN",
+                    "AUTO",
+                    "MIX"
+                ],
+                "version": "MINuo-Bert-VITS2",
+                "speaker": "Speaker"
+            },
+            "柯洁": {
+                "languages": [
+                    "ZH",
+                    "JP",
+                    "EN",
+                    "AUTO",
+                    "MIX"
+                ],
+                "version": "KeJie-Bert-VITS2",
+                "speaker": "Speaker"
+            },
+            "雪糕": {
+                "languages": [
+                    "ZH",
+                    "JP",
+                    "EN",
+                    "AUTO",
+                    "MIX"
+                ],
+                "version": "VITS2-test",
+                "speaker": "Cheese"
+            },
+            "山泥若": {
+                "languages": [
+                    "ZH",
+                    "JP",
+                    "EN",
+                    "AUTO",
+                    "MIX"
+                ],
+                "version": "SNR-Bert-VITS2",
+                "speaker": "Speaker"
             }
         }
     },

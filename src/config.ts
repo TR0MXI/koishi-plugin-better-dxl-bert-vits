@@ -1,5 +1,5 @@
 import { Schema } from 'koishi'
-import { Language } from '../lib/list'
+// import { Language } from '../lib/list'
 import { SpeakerKeyIdMap } from './constants'
 
 export const usage =
