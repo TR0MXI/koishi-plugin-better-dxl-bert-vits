@@ -8,7 +8,7 @@ export * from './config'
 
 export function apply(ctx: Context, config: Config) {
     const vits = new BertVits(ctx, config)
-
+    
     // if (config.service) {
     ctx.plugin(BertVitsService, vits)
     // }

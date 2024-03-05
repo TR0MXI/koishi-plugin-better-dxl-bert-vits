@@ -4,6 +4,7 @@ import { Config } from './config'
 import { APISpeakerList, SpeakerKeyIdMap } from './constants'
 import { API, SpeakConfig, Speaker } from './types'
 
+
 export class BertVits {
     private logger: Logger
 
@@ -16,14 +17,15 @@ export class BertVits {
         this.logger = ctx.logger('bert-vits')
     }
 
-    async say(input: string, options: Partial<SpeakConfig>): Promise<h> {
-        const [api, speaker, lang] = this.findSpeaker(options.speaker)
-        options.speaker = speaker.speaker ?? options.speaker
-        options.language = lang ?? options.language ?? 'ZH'
+    async say(input: string, options?: Partial<SpeakConfig>): Promise<h> {
+        const option = fallback(options, this.config)
+        const [api, speaker, lang] = this.findSpeaker(option.speaker)
+        option.speaker = speaker.speaker ?? option.speaker
+        option.language = lang ?? option.language ?? 'ZH'
 
         const payload = this._generatePlayLoad(
             input,
-            fallback(options, this.config)
+            option
         )
 
         try {
@@ -61,6 +63,7 @@ export class BertVits {
             }
         }
     }
+
 
     private _generatePlayLoad(input: string, options: SpeakConfig) {
         const {
@@ -145,10 +148,6 @@ export class BertVitsService extends Vits {
     }
 
     say(options: Vits.Result): Promise<h> {
-        if (SpeakerKeyIdMap[options.speaker_id] == null) {
-            throw new Error('Invalid speaker_id')
-        }
-
         return this.impl.say(options.input, {
             speaker: SpeakerKeyIdMap[options.speaker_id]
         })
@@ -158,5 +157,17 @@ export class BertVitsService extends Vits {
 // ??
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function fallback<T>(options: Partial<T>, defaultValues: any): Required<T> {
-    return Object.assign({}, defaultValues, options)
+    if (!options) {
+        return defaultValues
+    }
+
+    const result = Object.assign({}, defaultValues)
+
+    for (const key in options) {
+        if (options[key] && options[key] !== '') {
+            result[key] = options[key]
+        }
+    }
+
+    return result as Required<T>
 }
